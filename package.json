@@ -1,0 +1,9 @@
+{
+  "name": "hummus-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npx live-server --port=5500 --host=127.0.0.1",
+    "dev:open": "npx live-server --port=5500 --host=127.0.0.1 --open=/index.html"
+  }
+}

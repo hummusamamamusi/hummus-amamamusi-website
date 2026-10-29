@@ -1,0 +1,6 @@
+# robots.txt – Serwujemy pyszny hummus, śniadania, szakszukę, jajecznicę i kanapki. Wszystko roślinne i przygotowywane od podstaw.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://hummus-amamamusi.pl/sitemap.xml

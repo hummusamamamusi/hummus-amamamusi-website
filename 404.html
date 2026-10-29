@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <script src="js/gtag-consent-default.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, follow" />
+  <title>404 | Hummus Amamamusi</title>
+  <link rel="preload" href="fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/manrope-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/cookie-consent.css" media="print" onload="this.onload=null;this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="css/cookie-consent.css" />
+  </noscript>
+  <link rel="icon" type="image/svg+xml" href="https://hummus-amamamusi.pl/images/logo-hummus-amamamusi.avif" />
+</head>
+<body>
+  <main class="legal-page">
+    <a class="legal-back" href="index.html">← Strona główna</a>
+    <h1>404</h1>
+    <p>Tej strony nie znaleziono. Wróć na stronę główną Hummus Amamamusi.</p>
+    <p>
+      <a href="index.html">Wersja polska</a>
+      ·
+      <a href="en.html">English version</a>
+    </p>
+  </main>
+
+  <div id="cookie-banner" class="cookie-banner" hidden role="dialog" aria-labelledby="cookie-banner-title">
+    <div class="cookie-banner__inner">
+      <div class="cookie-banner__content">
+        <p id="cookie-banner-title" class="cookie-banner__title">Ta strona korzysta z plików cookies</p>
+        <p class="cookie-banner__text">
+          Używamy cookies analitycznych (Google Analytics), aby lepiej poznać sposób korzystania z witryny.
+          <a href="polityka-cookies.html">Polityka cookies</a>
+        </p>
+      </div>
+      <div class="cookie-banner__actions">
+        <button type="button" class="cookie-banner__btn cookie-banner__btn--secondary" id="cookie-open-settings">Ustawienia cookies</button>
+        <button type="button" class="cookie-banner__btn cookie-banner__btn--primary" id="cookie-accept-all">Akceptuję</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="cookie-settings-modal" class="cookie-modal" hidden role="dialog" aria-labelledby="cookie-modal-title" aria-modal="true">
+    <div class="cookie-modal__backdrop" data-cookie-modal-close tabindex="-1"></div>
+    <div class="cookie-modal__panel">
+      <button type="button" class="cookie-modal__close" data-cookie-modal-close aria-label="Zamknij">&times;</button>
+      <h2 id="cookie-modal-title" class="cookie-modal__title">Ustawienia cookies</h2>
+      <p class="cookie-modal__text">
+        Wybierz, które pliki cookies chcesz włączyć. Szczegóły w
+        <a href="polityka-cookies.html">polityce cookies</a>.
+      </p>
+      <label class="cookie-banner__toggle-row" for="cookie-analytics-toggle">
+        <span class="cookie-banner__toggle-text">
+          <span class="cookie-banner__toggle-label">Pliki cookies analityczne</span>
+          <span class="cookie-banner__toggle-hint">Google Analytics — statystyki odwiedzin witryny</span>
+        </span>
+        <span class="cookie-banner__switch">
+          <input type="checkbox" id="cookie-analytics-toggle" checked />
+          <span class="cookie-banner__slider" aria-hidden="true"></span>
+        </span>
+      </label>
+      <div class="cookie-modal__actions">
+        <button type="button" class="cookie-banner__btn cookie-banner__btn--primary" id="cookie-accept-selected">Akceptuję wybrane</button>
+      </div>
+    </div>
+  </div>
+  <script src="js/cookie-consent.js" defer></script>
+</body>
+</html>

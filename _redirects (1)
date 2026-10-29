@@ -1,0 +1,11 @@
+# Netlify redirects for hummus-amamamusi.pl
+# Old Wix addresses -> new site (301 = permanent).
+# www and http are handled by Netlify itself once hummus-amamamusi.pl is the primary domain.
+# Forced line (301!) must come first: Netlify would otherwise serve en.html at /en without redirecting.
+
+/en      /en.html   301!
+/en/     /en.html   301
+/en/*    /en.html   301
+
+# Anything else from the old Wix site -> home page (keep this line last)
+/*       /          301
