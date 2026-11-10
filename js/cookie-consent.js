@@ -1,7 +1,5 @@
 (function () {
   var STORAGE_KEY = "restaurant_cookie_consent";
-  var GA_ID = "G-2MFMP6783S";
-  var gaLoaded = false;
 
   function ensureGtag() {
     window.dataLayer = window.dataLayer || [];
@@ -126,60 +124,12 @@
     });
   }
 
-  function configureGoogleAnalytics() {
-    ensureGtag();
-    grantAnalyticsConsent();
-    gtag("js", new Date());
-    gtag("config", GA_ID, {
-      anonymize_ip: true,
-      allow_google_signals: false,
-      allow_ad_personalization_signals: false
-    });
-    gaLoaded = true;
-  }
-
-  function loadGoogleAnalytics() {
-    if (gaLoaded) {
-      configureGoogleAnalytics();
-      return;
-    }
-
-    ensureGtag();
-    grantAnalyticsConsent();
-
-    var existing = document.querySelector("script[data-hummus-ga]");
-    if (existing) {
-      if (existing.getAttribute("data-loaded") === "true") {
-        configureGoogleAnalytics();
-        return;
-      }
-      existing.addEventListener("load", function () {
-        existing.setAttribute("data-loaded", "true");
-        configureGoogleAnalytics();
-      });
-      return;
-    }
-
-    var script = document.createElement("script");
-    script.async = true;
-    script.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
-    script.setAttribute("data-hummus-ga", "true");
-    script.onload = function () {
-      script.setAttribute("data-loaded", "true");
-      configureGoogleAnalytics();
-    };
-    script.onerror = function () {
-      gaLoaded = false;
-    };
-    document.head.appendChild(script);
-  }
-
   function applyConsent(granted) {
     closeModal();
     if (granted) {
       setConsent("granted");
       hideBanner();
-      loadGoogleAnalytics();
+      grantAnalyticsConsent();
       return;
     }
     setConsent("denied");
@@ -236,12 +186,13 @@
     if (consent === "granted") {
       hideBanner();
       closeModal();
-      loadGoogleAnalytics();
+      grantAnalyticsConsent();
       return;
     }
     if (consent === "denied") {
       hideBanner();
       closeModal();
+      denyAnalyticsConsent();
       clearGoogleAnalyticsCookies();
       return;
     }
