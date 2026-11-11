@@ -24,7 +24,7 @@
   <main class="legal-page">
     <a class="legal-back" href="en.html">← Home</a>
     <h1>Cookie policy</h1>
-    <p class="legal-updated">Last updated: 10 November 2026</p>
+    <p class="legal-updated">Last updated: 11 November 2026</p>
 
     <p>
       Wersja polska:
@@ -55,13 +55,15 @@
     <ul>
       <li>
         <strong>Strictly necessary</strong> – required for basic operation, including
-        storing your cookie choice in the browser (<code>localStorage</code>).
+        storing your cookie choice in <code>localStorage</code>, or in
+        <code>sessionStorage</code> when local storage is unavailable.
         These do not require consent.
       </li>
       <li>
         <strong>Analytics (Google Analytics 4)</strong> – help us understand how
         visitors use the Service. Analytics cookies are stored only after you
-        accept them in the cookie banner.
+        consent, either with “Accept” or with “Accept selected” while the
+        analytics switch is on.
       </li>
     </ul>
     <p>
@@ -88,13 +90,13 @@
     <h2>5. Legal basis and purpose</h2>
     <p>
       Analytics cookies are processed on the basis of your <strong>consent</strong>
-      (Article 6(1)(a) GDPR and applicable ePrivacy rules) to measure traffic
-      and improve the Service.
+      (Article 6(1)(a) GDPR and Article 399 of the Polish Act of 12 July 2024 –
+      the Electronic Communications Law) to measure traffic and improve the Service.
     </p>
 
     <h2>6. Retention</h2>
     <ul>
-      <li>Your cookie choice – until removed from your browser (localStorage).</li>
+      <li>Your cookie choice – until removed from your browser. It is stored in localStorage, or in sessionStorage until the end of the browser session when local storage is unavailable.</li>
       <li>Google Analytics cookies – as defined by Google (typically up to 14 months, depending on cookie type).</li>
     </ul>
 
@@ -112,11 +114,43 @@
 
     <h2>8. Managing your consent</h2>
     <p>
-      On your first visit we show a banner with “Cookie settings” and “Accept”.
-      In settings you can enable or disable analytics cookies and save your choice
-      with “Accept selected”. You can change your choice at any time via
-      <a href="#" data-cookie-settings>cookie settings</a> in the site footer
-      or by clearing site data in your browser.
+      On your first visit a banner appears at the bottom of the page and the
+      “Cookie settings” dialog opens at the same time.
+    </p>
+    <p>The banner has two buttons:</p>
+    <ul>
+      <li>
+        <strong>Accept</strong> — turns analytics cookies on, stores your consent
+        and closes both the banner and the settings dialog.
+      </li>
+      <li>
+        <strong>Cookie settings</strong> — opens the settings dialog. On a first
+        visit that dialog is already open.
+      </li>
+    </ul>
+    <p>
+      In the settings dialog the “Analytics cookies” switch starts turned on.
+      <strong>Accept selected</strong> stores the current state of the switch:
+      on means you consent to analytics cookies, off means you do not.
+      Closing the dialog with the cross, by clicking the dimmed background, or
+      with the Escape key does not store a choice. The banner stays until you
+      pick one of these options.
+    </p>
+    <p>
+      Your choice is stored in the browser in <code>localStorage</code>
+      (key <code>restaurant_cookie_consent</code>, value <code>granted</code>
+      or <code>denied</code>). If <code>localStorage</code> is unavailable, it
+      is stored in <code>sessionStorage</code> and lasts only until you close
+      the tab or browser window.
+    </p>
+    <p>
+      You can change your choice at any time via
+      <a href="#" data-cookie-settings>cookie settings</a>
+      in the footer of the home page and the English version, on the 404 page,
+      and in this policy. The same dialog opens. If the browser has no stored
+      choice yet, the banner is shown again as well. You can also remove the
+      choice by clearing this site’s data in your browser. If you decline,
+      the Service deletes Google Analytics cookies stored for this domain.
     </p>
   </main>
 

@@ -24,7 +24,7 @@
   <main class="legal-page">
     <a class="legal-back" href="index.html">← Strona główna</a>
     <h1>Polityka cookies</h1>
-    <p class="legal-updated">Ostatnia aktualizacja: 10 listopada 2026 r.</p>
+    <p class="legal-updated">Ostatnia aktualizacja: 11 listopada 2026 r.</p>
 
     <p>
       English version:
@@ -58,15 +58,17 @@
     <p>W Serwisie mogą być używane następujące kategorie:</p>
     <ul>
       <li>
-        <strong>Niezbędne</strong> – umożliwiają podstawowe działanie Serwisu
-        (np. zapamiętanie Twojej decyzji dotyczącej cookies w przeglądarce
-        za pomocą mechanizmu <code>localStorage</code>). Nie wymagają zgody.
+        <strong>Niezbędne</strong> – umożliwiają podstawowe działanie Serwisu,
+        w tym zapamiętanie Twojej decyzji dotyczącej cookies w
+        <code>localStorage</code>, a gdy jest niedostępny — w
+        <code>sessionStorage</code>. Nie wymagają zgody.
       </li>
       <li>
         <strong>Analityczne (Google Analytics 4)</strong> – pomagają zrozumieć,
         w jaki sposób użytkownicy korzystają z Serwisu (np. liczba odwiedzin,
-        źródło ruchu, zachowanie na stronie). Pliki cookies analityczne są
-        zapisywane wyłącznie po wyrażeniu przez Ciebie zgody.
+        źródło ruchu,         zachowanie na stronie). Pliki cookies analityczne są zapisywane wyłącznie
+        po wyrażeniu zgody — przyciskiem „Akceptuję” albo „Akceptuję wybrane”
+        przy włączonym przełączniku analityki.
       </li>
     </ul>
     <p>
@@ -94,13 +96,13 @@
     <h2>5. Podstawa prawna i cel przetwarzania</h2>
     <p>
       Cookies analityczne przetwarzamy na podstawie Twojej <strong>zgody</strong>
-      (art. 6 ust. 1 lit. a RODO oraz przepisy ePrivacy, w tym art. 173 ust. 1
-      ustawy Prawo telekomunikacyjne) w celu prowadzenia statystyk i ulepszania Serwisu.
+      (art. 6 ust. 1 lit. a RODO oraz art. 399 ustawy z dnia 12 lipca 2024 r. –
+      Prawo komunikacji elektronicznej) w celu prowadzenia statystyk i ulepszania Serwisu.
     </p>
 
     <h2>6. Okres przechowywania</h2>
     <ul>
-      <li>Twoja decyzja dotycząca cookies – do czasu jej usunięcia z przeglądarki (localStorage).</li>
+      <li>Twoja decyzja dotycząca cookies – do czasu jej usunięcia z przeglądarki. Zapis trzymamy w localStorage, a gdy jest niedostępny, w sessionStorage do końca sesji przeglądarki.</li>
       <li>Cookies Google Analytics – zgodnie z ustawieniami tej usługi (zwykle do 14 miesięcy, w zależności od typu pliku).</li>
     </ul>
 
@@ -118,11 +120,43 @@
 
     <h2>8. Jak zarządzać zgodą?</h2>
     <p>
-      Przy pierwszej wizycie wyświetlamy baner z przyciskami „Ustawienia cookies”
-      i „Akceptuję”. W ustawieniach możesz włączyć lub wyłączyć cookies analityczne
-      i zapisać wybór przyciskiem „Akceptuję wybrane”. Zgodę możesz zmienić w każdej chwili,
-      klikając <a href="#" data-cookie-settings>ustawienia cookies</a> w stopce Serwisu
-      lub usuwając dane witryny w ustawieniach przeglądarki.
+      Przy pierwszej wizycie na dole strony pojawia się baner, a jednocześnie
+      otwiera się okno „Ustawienia cookies”.
+    </p>
+    <p>Baner ma dwa przyciski:</p>
+    <ul>
+      <li>
+        <strong>Akceptuję</strong> — włącza cookies analityczne, zapisuje zgodę
+        i zamyka baner oraz okno ustawień.
+      </li>
+      <li>
+        <strong>Ustawienia cookies</strong> — otwiera okno ustawień. Przy pierwszej
+        wizycie to okno jest już otwarte.
+      </li>
+    </ul>
+    <p>
+      W oknie ustawień przełącznik „Pliki cookies analityczne” jest na początku
+      włączony. Przycisk <strong>Akceptuję wybrane</strong> zapisuje aktualny stan
+      przełącznika: włączony oznacza zgodę na cookies analityczne, wyłączony
+      oznacza brak zgody. Zamknięcie okna krzyżykiem, kliknięciem w przyciemnione
+      tło albo klawiszem Escape nie zapisuje decyzji. Baner zostaje widoczny,
+      dopóki nie wybierzesz jednej z tych opcji.
+    </p>
+    <p>
+      Wybrana decyzja jest zapisywana w przeglądarce w <code>localStorage</code>
+      (klucz <code>restaurant_cookie_consent</code>, wartość <code>granted</code>
+      albo <code>denied</code>). Jeśli <code>localStorage</code> jest niedostępny,
+      zapis trafia do <code>sessionStorage</code> i obowiązuje tylko do zamknięcia
+      karty albo okna przeglądarki.
+    </p>
+    <p>
+      Zgodę możesz zmienić w każdej chwili, klikając
+      <a href="#" data-cookie-settings>ustawienia cookies</a>
+      w stopce strony głównej i wersji angielskiej, na stronie błędu 404 oraz w tej polityce.
+      Otworzy się to samo okno. Jeśli przeglądarka nie ma jeszcze zapisanej decyzji,
+      ponownie pojawi się też baner. Decyzję możesz też usunąć, czyszcząc dane witryny
+      w ustawieniach przeglądarki. Po wyborze braku zgody Serwis usuwa cookies
+      Google Analytics zapisane dla tej domeny.
     </p>
   </main>
 
