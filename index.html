@@ -6,6 +6,13 @@
   <script src="js/gtag-consent-default.js"></script>
   <script>
     try {
+      var navigation = performance.getEntriesByType("navigation")[0];
+      var isReload = navigation
+        ? navigation.type === "reload"
+        : performance.navigation && performance.navigation.type === 1;
+      if (isReload && location.hash) {
+        history.replaceState(null, "", location.pathname + location.search);
+      }
       if (sessionStorage.getItem("hummus-lang-scroll") !== null) {
         history.scrollRestoration = "manual";
         document.documentElement.classList.add("is-restoring-scroll");
